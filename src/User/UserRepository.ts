@@ -1,8 +1,7 @@
 import IUser from "~/interfaces/IUser";
 import fs from "fs";
 import { v4 as uuidv4 } from "uuid";
-
-const userFile = "src/db/user.json";
+import { userFile } from "../db/files";
 
 class UserRepository {
   public getUser(data: string) {
@@ -31,8 +30,6 @@ class UserRepository {
     }
 
     arrayJson.push({ id: id, name: data.name, email: data.email });
-
-    console.log("arrayJson", arrayJson);
 
     fs.writeFile(userFile, JSON.stringify(arrayJson), (err) => {
       if (err) {

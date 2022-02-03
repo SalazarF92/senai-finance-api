@@ -1,6 +1,7 @@
 import IUser from "~/interfaces/IUser";
 import fs from "fs";
 import { userRepository } from "./userRepository";
+import { userFile } from "../db/files";
 
 class UserService {
   public async getUser(data: string) {
@@ -8,36 +9,40 @@ class UserService {
   }
 
   public async find(data: IUser) {
-    const jsonData = fs.readFileSync("src/db/user.json", "utf8");
+    const jsonData = fs.readFileSync(userFile, "utf8");
 
     const dataParse = JSON.parse(jsonData);
 
     let msg = "";
-    dataParse.find((element) => {
-      if (element.email == data.email && element.id != data.id) {
-        msg = "cannot change";
-        return;
-      } else if (element.email !== data.email && element.id != data.id) {
-        msg = "can create";
-        return;
-      }
+
+    const result = dataParse.find((element) => {
+      return element.email == data.email;
     });
+    if (result == undefined) {
+      msg = "can create";
+    } else if (result.email == data.email && !data.id) {
+      msg = "cannot create";
+    } else if (result.email !== data.email && !data.id) {
+      msg = "can create";
+    } else if (result.email == data.email && result.id != data.id) {
+      msg = "cannot change";
+    } else if (result.email !== data.email && result.id != data.id) {
+      msg = "can create";
+    }
     return msg;
   }
 
   public async addUser(data: IUser) {
-    fs.existsSync("src/db/user.json")
-      ? fs.readFileSync("src/db/user.json").length < 2
-        ? fs.writeFileSync("src/db/user.json", "[]")
+    fs.existsSync(userFile)
+      ? fs.readFileSync(userFile).length < 2
+        ? fs.writeFileSync(userFile, "[]")
         : "false2"
-      : fs.writeFileSync("src/db/user.json", "[]");
-
-    console.log(fs.readFileSync("src/db/user.json").length);
+      : fs.writeFileSync(userFile, "[]");
 
     const alreadyExists = await this.find(data);
-    if (alreadyExists) {
-      console.log("ja tem esse email");
-      throw new Error("User already exists");
+    console.log("already", alreadyExists);
+    if (alreadyExists == "cannot create") {
+      throw new Error("Email already exists");
     }
 
     return userRepository.addUser(data);
@@ -45,8 +50,6 @@ class UserService {
 
   public async updateUser(data: IUser) {
     const alreadyExists = await this.find(data);
-
-    console.log("alreadyExists", alreadyExists);
 
     if (alreadyExists == "cannot change") {
       console.log("Email já existente");

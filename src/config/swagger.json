@@ -1,0 +1,193 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.0.1",
+    "title": "Backend 01 Documentation",
+    "description": "Backend 01"
+  },
+  "license": {
+    "name": "MIT",
+    "url": "https://opensource.org/licenses/MIT"
+  },
+  "host": "localhost:5009",
+  "tags": [
+    {
+      "name": "User",
+      "description": "API for Users Endpoints"
+    },
+    {
+      "name": "Financials",
+      "description": "API for Financials Endpoints"
+    }
+  ],
+  "schemes": ["http", "https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/user/": {
+      "post": {
+        "tags": ["User"],
+        "summary": "API Endpoint for create User",
+        "description": "Create new User in database",
+        "parameters": [
+          {
+            "name": "name",
+            "required": "true",
+            "type": "string",
+            "in": "Name of User",
+            "schema": {
+              "$ref": "#definitions/User"
+            }
+          },
+          {
+            "name": "email",
+            "required": "true",
+            "type": "string",
+            "in": "Email of User",
+            "schema": {
+              "$ref": "#definitions/User"
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "New user has Created",
+            "schema": {
+              "$ref": "#definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/financials": {
+      "post": {
+        "tags": ["Financials"],
+        "summary": "Create a new Financial",
+        "description": "Add new Financial",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "id",
+            "in": "id",
+            "schema": {
+              "$ref": "#definitions/Financials"
+            }
+          },
+          {
+            "name": "userId",
+            "type": "string",
+            "required": "true",
+            "description": "userId",
+            "in": "user of id",
+            "schema": {
+              "$ref": "#definitions/Financials"
+            }
+          },
+          {
+            "name": "uid",
+            "type": "string",
+            "description": "FinancialId",
+            "in": "Financial id",
+            "schema": {
+              "$ref": "#definitions/Financials"
+            }
+          },
+          {
+            "name": "typesOfExpenses",
+            "type": "string",
+            "required": "true",
+            "description": "typesOfExpenses",
+            "in": "typesOfExpenses",
+            "schema": {
+              "$ref": "#definitions/Financials"
+            }
+          },
+          {
+            "name": "date",
+            "type": "date",
+            "description": "Date of expense",
+            "in": "Date of expense",
+            "schema": {
+              "$ref": "#definitions/Financials"
+            }
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "required": "true",
+            "description": "Name of expense",
+            "in": "Name of expense",
+            "schema": {
+              "$ref": "#definitions/Financials"
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "New Financials is created",
+            "schema": {
+              "$ref": "#definitions/Financials"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "required": ["name", "email"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "Financials": {
+      "required": ["userId"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "financialsData": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "uid": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number",
+                "required": true
+              },
+              "typesOfExpenses": {
+                "type": "string",
+                "required": true
+              },
+              "date": {
+                "type": "string",
+                "required": true
+              },
+              "name": {
+                "type": "string",
+                "required": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
