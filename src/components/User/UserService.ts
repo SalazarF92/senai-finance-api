@@ -1,7 +1,7 @@
-import IUser from "~/interfaces/IUser";
+import IUser from "~/components/interfaces/IUser";
 import fs from "fs";
 import { userRepository } from "./userRepository";
-import { userFile } from "../db/files";
+import { userFile } from "../../db/files";
 
 class UserService {
   public async getUser(data: string) {

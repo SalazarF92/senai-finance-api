@@ -1,1 +1,29 @@
-[{"name":"Teste","email":"teste@vrajki.oof"},{"name":"Teste2","email":"teste2@vrajki.oof"},{"name":"Teste3","email":"teste3@vrajki.oof"},{"name":"Teste3","email":"teste3@vrajki.oof"},{"name":"Teste3","email":"teste3@vrajki.oof"},{"name":"Teste3","email":"teste3@vrajki.oof"},{"name":"Teste3","email":"teste3@vrajki.oof"},{"name":"Teste3","email":"teste3@vrajki.oof"},{"name":"Teste3","email":"teste3@vrajki.oof"},{"name":"Teste3","email":"teste3@vrajki.oof"},{"name":"Teste3","email":"teste3@vr121212ajki.oof"},{"name":"Teste3","email":"teste3@vr121212ajki.oof"},{"name":"Teste3","email":"teste3@vr1212121212ajki.oof"},{"name":"Teste3","email":"teste3@vr1212121212aaaaajki.oof"}]
+[
+  {
+    "id": "7cb7e512-f821-44df-be56-71d2418d9dae",
+    "userId": "e724d3d3-c081-4420-8050-cb0801c22fa1",
+    "financialData": [
+      {
+        "id": "c7b38f57-9aca-40d2-8aa8-1b5674e00d24",
+        "price": 35,
+        "typesOfExpenses": "consumo",
+        "date": "2021-10-25T03:00:28.000Z",
+        "name": "gasolina"
+      },
+      {
+        "id": "e8fbcae9-f5fa-4f5f-904b-ac069d48eb67",
+        "price": 73,
+        "typesOfExpenses": "alimentação",
+        "date": "2021-11-25T03:00:28.000Z",
+        "name": "churrascaria"
+      },
+      {
+        "id": "35d052d4-ea94-429c-9b81-4c15fc9dd1c0",
+        "price": 27,
+        "typesOfExpenses": "alimentação",
+        "date": "2021-12-27T03:00:28.000Z",
+        "name": "cerveja artesanal"
+      }
+    ]
+  }
+]

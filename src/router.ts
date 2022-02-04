@@ -1,11 +1,14 @@
 import * as express from "express";
-import UserRouter from "./User/UserRouter";
+import FinancialRouter from "./components/Financial/FinancialRouter";
+import UserRouter from "./components/User/UserRouter";
 
 const router = express.Router();
 
 router.use(express.json());
 
 router.use("/user", UserRouter);
+
+router.use("/financial", FinancialRouter);
 
 router.get("/", (req, res) => {
   res.json({
