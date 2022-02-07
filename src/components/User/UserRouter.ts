@@ -9,8 +9,8 @@ router.get("/id/:id", async (req, res) => {
   console.log("data", data);
 
   try {
-    await userService.getUser(data);
-    res.json(data);
+    const result = await userService.getUser(data);
+    res.json(result);
   } catch (err) {
     res.json({ error: err.message });
   }

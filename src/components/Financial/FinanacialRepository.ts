@@ -150,7 +150,11 @@ class UserRepository {
             });
         });
         // return `O gasto do mês ${i + 1} foi de R$${sumData}`;
-        arrayRaw.push(`O gasto do mês ${i + 1} foi de R$${sumData}`);
+        arrayRaw.push(
+          `O gasto do mês ${
+            i + 1
+          } no tipo ${typesOfExpenses} foi de R$${sumData}`
+        );
         console.log(`O gasto do mês ${i + 1} foi de R$${sumData}`);
       }
     }
