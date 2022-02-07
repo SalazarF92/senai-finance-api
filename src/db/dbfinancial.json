@@ -1,28 +1,143 @@
 [
   {
-    "id": "7cb7e512-f821-44df-be56-71d2418d9dae",
-    "userId": "e724d3d3-c081-4420-8050-cb0801c22fa1",
+    "id": "9c8ef75e-6808-4e7d-8a01-a65ae80f5cc8",
+    "userId": "00b050a5-2163-442f-aa04-562ded75adf9",
     "financialData": [
       {
-        "id": "c7b38f57-9aca-40d2-8aa8-1b5674e00d24",
+        "id": "3ea8c7c0-79dc-45e8-ac0a-0dfd93f1c03a",
         "price": 35,
         "typesOfExpenses": "consumo",
         "date": "2021-10-25T03:00:28.000Z",
         "name": "gasolina"
       },
       {
-        "id": "e8fbcae9-f5fa-4f5f-904b-ac069d48eb67",
+        "id": "2550fbb7-87bc-4827-972a-d909e7694841",
         "price": 73,
         "typesOfExpenses": "alimentação",
         "date": "2021-11-25T03:00:28.000Z",
         "name": "churrascaria"
       },
       {
-        "id": "35d052d4-ea94-429c-9b81-4c15fc9dd1c0",
+        "id": "149c5d9f-42b8-4212-a991-6e6fe8424a70",
         "price": 27,
         "typesOfExpenses": "alimentação",
         "date": "2021-12-27T03:00:28.000Z",
         "name": "cerveja artesanal"
+      }
+    ]
+  },
+  {
+    "id": "15665bfc-3af2-4833-af9a-95da54604686",
+    "userId": "651971c0-7f88-4527-a046-b53affce4acc",
+    "financialData": [
+      {
+        "id": "70f2cfae-4896-41d9-a7e9-c5ed2cdf65e8",
+        "price": 35,
+        "typesOfExpenses": "consumo",
+        "date": "2021-10-25T03:00:28.000Z",
+        "name": "gasolina"
+      },
+      {
+        "id": "0c5bc6f5-55ff-4202-9a03-ebe6a97da5e6",
+        "price": 73,
+        "typesOfExpenses": "alimentação",
+        "date": "2021-11-25T03:00:28.000Z",
+        "name": "churrascaria"
+      },
+      {
+        "id": "c625697f-934e-4376-82f7-93e5e04c56fa",
+        "price": 27,
+        "typesOfExpenses": "alimentação",
+        "date": "2021-12-27T03:00:28.000Z",
+        "name": "cerveja artesanal"
+      }
+    ]
+  },
+  {
+    "id": "a10659f5-fd47-40ca-9d9c-959eebe471a0",
+    "userId": "e724d3d3-c081-4420-8050-cb0801c22fa1",
+    "financialData": [
+      {
+        "id": "d2183124-930a-42b7-94a1-d42a099cf0f4",
+        "price": 35,
+        "typesOfExpenses": "consumo",
+        "date": "2021-10-25T03:00:28.000Z",
+        "name": "gasolina"
+      },
+      {
+        "id": "d2183124-930a-42b7-94a1-d42a099cf0f4",
+        "price": 74,
+        "typesOfExpenses": "consumo",
+        "date": "2021-10-23T03:00:28.000Z",
+        "name": "gasolina"
+      },
+      {
+        "id": "931bd153-cf4c-4980-86c7-2ef03d47436b",
+        "price": 73,
+        "typesOfExpenses": "alimentação",
+        "date": "2021-11-25T03:00:28.000Z",
+        "name": "churrascaria"
+      },
+      {
+        "id": "5a125035-131b-40e3-aaa1-a3d0895e1761",
+        "price": 27,
+        "typesOfExpenses": "alimentação",
+        "date": "2021-12-27T03:00:28.000Z",
+        "name": "cerveja artesanal"
+      }
+    ]
+  },
+  {
+    "id": "4a244aee-649d-409b-982c-3961abe9fb1e",
+    "userId": "e724d3d3-c081-4420-8050-cb0801c22fa1",
+    "financialData": [
+      {
+        "id": "4cb79854-4fde-4584-ab66-cb55af426178",
+        "price": 35,
+        "typesOfExpenses": "consumo",
+        "date": "2021-10-25T03:00:28.000Z",
+        "name": "gasolina"
+      },
+      {
+        "id": "ce22222c-b87c-4831-a358-b66143efbd4e",
+        "price": 73,
+        "typesOfExpenses": "alimentação",
+        "date": "2021-11-25T03:00:28.000Z",
+        "name": "churrascaria"
+      },
+      {
+        "id": "5bef5c5c-600f-4988-bdee-2514a9595fef",
+        "price": 27,
+        "typesOfExpenses": "alimentação",
+        "date": "2021-12-27T03:00:28.000Z",
+        "name": "cerveja artesanal"
+      }
+    ]
+  },
+  {
+    "id": "42a43f30-c225-4f11-9bc6-ed3f259e87a3",
+    "userId": "e724d3d3-c081-4420-8050-cb0801c22fa1",
+    "financialData": [
+      {
+        "id": "1234bab8-2e06-44a9-a4c4-304716185a48",
+        "price": 35,
+        "typesOfExpenses": "consumo",
+        "date": "2021-10-25T03:00:28.000Z",
+        "name": "gasolina"
+      },
+      {
+        "id": "8bbc7007-f138-483a-896b-e2c599026f0a",
+        "price": 75,
+        "typesOfExpenses": "geral",
+        "date": "2020-04-25T03:00:28.000Z",
+        "name": "mercado"
+      },
+      {
+        "id": "32550f52-d97d-4a80-9b83-385ab5f58de0",
+        "price": 133,
+        "typesOfExpenses": "geral",
+        "date": "2022-03-25T03:00:28.000Z",
+        "name": "viagem"
       }
     ]
   }

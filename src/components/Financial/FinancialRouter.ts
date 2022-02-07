@@ -14,37 +14,49 @@ router.post("/userId/:userId", async (req, res) => {
   }
 });
 
-// router.get("/id/:id", async (req, res) => {
-//   const data = req.params.id;
+router.delete("/userId/:userId/financialId/:financialId", async (req, res) => {
+  const data = {
+    userId: req.params.userId,
+    financialId: req.params.financialId,
+  };
 
-//   try {
-//     await userService.getUser(data);
-//     res.json(data);
-//   } catch (err) {
-//     res.json({ error: err.message });
-//   }
-// });
+  try {
+    await financialService.deleteFinancial(data.userId, data.financialId);
+    res.json("Dados financeiros removidos com sucesso");
+  } catch (err) {
+    res.json({ error: err.message });
+  }
+});
 
-// router.post("", async (req, res) => {
-//   const { name, email } = req.body;
+router.get("/userId/:userId", async (req, res) => {
+  const data = req.params.userId;
 
-//   try {
-//     await userService.addUser({ name, email });
-//     res.json("account created");
-//   } catch (err) {
-//     res.json({ error: err.message });
-//   }
-// });
+  try {
+    const result = await financialService.getFinancial(data);
+    res.json(result);
+  } catch (err) {
+    res.json({ error: err.message });
+  }
+});
 
-// router.patch("", async (req, res) => {
-//   const { id, name, email } = req.body;
+router.get(
+  "/userId/:userId/typesOfExpenses/:typesOfExpenses",
+  async (req, res) => {
+    const data = {
+      userId: req.params.userId,
+      typesOfExpenses: req.params.typesOfExpenses,
+    };
 
-//   try {
-//     await userService.updateUser({ id, name, email });
-//     res.json("account updated");
-//   } catch (err) {
-//     res.json({ error: err.message });
-//   }
-// });
+    try {
+      const result = await financialService.getExpense(
+        data.userId,
+        data.typesOfExpenses
+      );
+      res.json(result);
+    } catch (err) {
+      res.json({ error: err.message });
+    }
+  }
+);
 
 export default router;

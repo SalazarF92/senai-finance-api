@@ -1,5 +1,5 @@
 import fs from "fs";
-import { userRepository } from "./FinanacialRepository";
+import { financialRepository } from "./FinanacialRepository";
 import { financeFile } from "../../db/files";
 
 class FinancialService {
@@ -16,7 +16,18 @@ class FinancialService {
     //   throw new Error("Email already exists");
     // }
 
-    return userRepository.addFinancial(userId);
+    return financialRepository.addFinancial(userId);
+  }
+  public async deleteFinancial(userId: string, financialId: string) {
+    return financialRepository.deleteFinancial(userId, financialId);
+  }
+
+  public async getFinancial(userId: string) {
+    return financialRepository.getFinancial(userId);
+  }
+
+  public async getExpense(userId: string, typesOfExpenses: string) {
+    return financialRepository.getExpense(userId, typesOfExpenses);
   }
 }
 
